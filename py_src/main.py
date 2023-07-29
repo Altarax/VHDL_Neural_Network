@@ -10,7 +10,6 @@ from sklearn.preprocessing import MultiLabelBinarizer
 
 DATASET_PATH = "py_src\A_Z Handwritten Data.csv"
 
-
 # Initialisation
 def init(layers_dimensions: list) -> dict:
     parameters = {}
@@ -101,12 +100,17 @@ def create_neural_network(X, y, hidden_layers: int, learning_rate: int, n_iter: 
         activations = do_forward_propagation(X, parameters)
         gradients = do_back_propagation(y, parameters, activations)
         parameters = update(gradients, parameters, learning_rate)
-        Af = activations["A" + str(C)]
 
+        """ TODO : This is not working.
+        Af = activations["A" + str(C)]
         labels =[['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], ["1","2"]]
         training_history[i, 0] = log_loss(y.flatten(), Af.flatten(), labels=labels)
         y_pred = predict_y(X, parameters)
         training_history[i, 1] = accuracy_score(y.flatten(), y_pred.flatten())
+        """
+
+    print(activations)
+    print(gradients)
 
     # Plot courbe d'apprentissage
     plt.figure(figsize=(12, 4))
@@ -134,9 +138,9 @@ def prepare_csv_dataset(dataset_path: str) -> tuple:
 
 
 if __name__ == "__main__":
-    HIDDEN_LAYERS = (100, 100, 100)
+    HIDDEN_LAYERS = (4, 4, 4)
     LEARNING_RATE = 0.1
-    N_ITER = 3000
+    N_ITER = 3
 
     X, y = prepare_csv_dataset(DATASET_PATH)
     create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
