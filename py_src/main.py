@@ -100,17 +100,12 @@ def create_neural_network(X, y, hidden_layers: int, learning_rate: int, n_iter: 
         activations = do_forward_propagation(X, parameters)
         gradients = do_back_propagation(y, parameters, activations)
         parameters = update(gradients, parameters, learning_rate)
-
-        """ TODO : This is not working.
         Af = activations["A" + str(C)]
-        labels =[['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'], ["1","2"]]
+
+        labels =['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
         training_history[i, 0] = log_loss(y.flatten(), Af.flatten(), labels=labels)
         y_pred = predict_y(X, parameters)
         training_history[i, 1] = accuracy_score(y.flatten(), y_pred.flatten())
-        """
-
-    print(activations)
-    print(gradients)
 
     # Plot courbe d'apprentissage
     plt.figure(figsize=(12, 4))
@@ -126,21 +121,28 @@ def create_neural_network(X, y, hidden_layers: int, learning_rate: int, n_iter: 
 
 
 # Prepare CSV dataset
-def prepare_csv_dataset(dataset_path: str) -> tuple:
+def prepare_csv_dataset(dataset_path: str, subset_size) -> tuple:
     data = pd.read_csv("py_src\A_Z Handwritten Data.csv").astype("float32")
 
-    X = data.drop("0", axis=1)
+    X = data.drop("0", axis=1) 
     X = X.T
     y = data["0"]
     y = y.values.reshape((1, y.shape[0]))
 
+    # Select a subset of the dataset
+    if subset_size:
+        X_subset = X[:, :subset_size]
+        y_subset = y[:subset_size]
+        return X_subset, y_subset
+    
     return X, y
 
 
 if __name__ == "__main__":
     HIDDEN_LAYERS = (4, 4, 4)
     LEARNING_RATE = 0.1
+    SUBSET_SIZE = 500
     N_ITER = 3
 
-    X, y = prepare_csv_dataset(DATASET_PATH)
+    X, y = prepare_csv_dataset(DATASET_PATH, SUBSET_SIZE)
     create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
