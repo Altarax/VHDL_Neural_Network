@@ -136,19 +136,45 @@ def prepare_csv_dataset(dataset_path: str, subset_size) -> tuple:
     return X, y
 
 
+def convert_floating_points_to_fixed_points(dimensions, parameters, activations):
+    factor = 5
+    upscale = 8
+    inputFactor = 1 / ((2 ** upscale) - 1)
+    
+    neurons = []
+
+    C = len(dimensions)
+    for c in range(C):
+        for i in range(dimensions[c]):
+            neurons.append({"Neurons" + str(c) + str(i) : {'W' + str(c) : None, 'b' + str(c) : None}})
+
+    for c in range(C):
+        for i in range(dimensions[c]):
+            neurons["Neurons" + str(c) + str(i)]['W'+str(c)] = 2**factor
+    #network1 = (2 ** factor) * nnParams[1]
+    #network2 = (2 ** factor) * nnParams[2]
+
+    network1[:, 3] *= (2 ** upscale)
+    network2[:, 3] *= (2 ** upscale)
+
+    network1 = network1.astype(np.int32)
+    network2 = network2.astype(np.int32)
+
+
 if __name__ == '__main__':
-    HIDDEN_LAYERS = (3, 3, 3)
+    HIDDEN_LAYERS = (1, 3, 3)
     LEARNING_RATE = 0.1
     SUBSET_SIZE = 600
-    N_ITER = 3000
+    N_ITER = 50
 
     # Let's try without a real case because I need to learn some VHDL and at this point it's not really working
     # X, y = prepare_csv_dataset(DATASET_PATH, SUBSET_SIZE)
-
     X, y = make_circles(n_samples=100, noise=0.1, factor=0.3, random_state=0)
     X = X.T
     y = y.reshape((1, y.shape[0]))
     
     training_history, activations, parameters = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
-    print(activations)
     print(parameters)
+    convert_floating_points_to_fixed_points(HIDDEN_LAYERS, activations, parameters)
+
+
