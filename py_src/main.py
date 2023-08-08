@@ -104,8 +104,8 @@ def create_neural_network(X, y, hidden_layers: int, learning_rate: int, n_iter: 
         y_pred = predict_y(X, parameters)
         training_history[i, 1] = accuracy_score(y.flatten(), y_pred.flatten())
 
-    # Plot courbe d'apprentissage
-    """
+    # Ploting learning curve
+    """ Commented to test without losing time displaying something
     plt.figure(figsize=(12, 4))
     plt.subplot(1, 2, 1)
     plt.plot(training_history[:, 0], label='train loss')
@@ -136,45 +136,50 @@ def prepare_csv_dataset(dataset_path: str, subset_size) -> tuple:
     return X, y
 
 
-def convert_floating_points_to_fixed_points(dimensions, parameters, activations):
-    factor = 5
-    upscale = 8
-    inputFactor = 1 / ((2 ** upscale) - 1)
+# Create a test dataset
+def create_circle_dataset(n_samples=100, noise=0.1, factor=0.3, random_state=0):
+    X, y = make_circles(n_samples=n_samples, noise=noise, factor=factor, random_state=random_state)
+    X = X.T
+    y = y.reshape((1, y.shape[0]))
+    return X, y
+
+
+# Converti floating point to fixed point
+def convert_to_fixed_point(parameters, activations, factor=5, upscale=8):
+    converted_parameters = {}
+    calculated_factor = (2 ** factor)
     
-    neurons = []
-
-    C = len(dimensions)
-    for c in range(C):
-        for i in range(dimensions[c]):
-            neurons.append({"Neurons" + str(c) + str(i) : {'W' + str(c) : None, 'b' + str(c) : None}})
-
-    for c in range(C):
-        for i in range(dimensions[c]):
-            neurons["Neurons" + str(c) + str(i)]['W'+str(c)] = 2**factor
-    #network1 = (2 ** factor) * nnParams[1]
-    #network2 = (2 ** factor) * nnParams[2]
-
-    network1[:, 3] *= (2 ** upscale)
-    network2[:, 3] *= (2 ** upscale)
-
-    network1 = network1.astype(np.int32)
-    network2 = network2.astype(np.int32)
+    for key, value in parameters.items():
+        if isinstance(value, np.ndarray):
+            if key.startswith('W') or key.startswith('b'):
+                scaled_value = calculated_factor * value
+                converted_parameters[key] = np.int32(scaled_value)
+            else:
+                converted_parameters[key] = value
+        elif isinstance(value, (int, float)):
+            converted_parameters[key] = int(value)
+        else:
+            converted_parameters[key] = value
+    
+    converted_activations = {}
+    for key, value in activations.items():
+        if isinstance(value, np.ndarray) and key.startswith('A'):
+            scaled_value = calculated_factor * value
+            converted_activations[key] = np.int32(scaled_value)
+        else:
+            converted_activations[key] = value
+    
+    return converted_parameters, converted_activations
 
 
 if __name__ == '__main__':
-    HIDDEN_LAYERS = (1, 3, 3)
+    HIDDEN_LAYERS = (3, 1)
     LEARNING_RATE = 0.1
     SUBSET_SIZE = 600
     N_ITER = 50
 
-    # Let's try without a real case because I need to learn some VHDL and at this point it's not really working
-    # X, y = prepare_csv_dataset(DATASET_PATH, SUBSET_SIZE)
-    X, y = make_circles(n_samples=100, noise=0.1, factor=0.3, random_state=0)
-    X = X.T
-    y = y.reshape((1, y.shape[0]))
-    
-    training_history, activations, parameters = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
-    print(parameters)
-    convert_floating_points_to_fixed_points(HIDDEN_LAYERS, activations, parameters)
+    X, y                                        = create_circle_dataset()
+    training_history, activations, parameters   = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
+    converted_parameters, converted_activations = convert_to_fixed_point(parameters, activations)
 
 
