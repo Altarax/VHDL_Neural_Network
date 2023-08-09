@@ -12,4 +12,5 @@ A complete neural network to learn two things : training a neural network in Pyt
     - [] Simulate everything 
 - [] Make everything automatised :
     - [x] Convert floating point to fixed point
+    - [] Generate bus_arrays with a and b parameters
     - [] Generate the network according to the given parameters
