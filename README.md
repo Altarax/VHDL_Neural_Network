@@ -10,4 +10,6 @@ A complete neural network to learn two things : training a neural network in Pyt
     - [] Create the layer
     - [] Create the neural network (TOP LEVEL)
     - [] Simulate everything 
-- [] Make everything automatised
+- [] Make everything automatised :
+    - [x] Convert floating point to fixed point
+    - [] Generate the network according to the given parameters
