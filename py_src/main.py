@@ -173,7 +173,7 @@ def convert_to_fixed_point(parameters, activations, factor=5, upscale=8):
 
 
 if __name__ == '__main__':
-    HIDDEN_LAYERS = (3, 1)
+    HIDDEN_LAYERS = (2, 2)
     LEARNING_RATE = 0.1
     SUBSET_SIZE = 600
     N_ITER = 50
@@ -181,5 +181,7 @@ if __name__ == '__main__':
     X, y                                        = create_circle_dataset()
     training_history, activations, parameters   = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
     converted_parameters, converted_activations = convert_to_fixed_point(parameters, activations)
+
+    print(parameters)
 
 
