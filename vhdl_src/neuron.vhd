@@ -25,8 +25,6 @@ end entity neuron;
 
 architecture rtl of neuron is
     
-begin
-
 	type int_array is array(0 to INPUTS-1) of integer;
     signal pipeline_stage_s	: integer range 0 to 3  := 0;
     signal mult_result_s 	: int_array             := (others => 0);
