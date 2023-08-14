@@ -69,7 +69,15 @@ begin
 								add_result_s <= add_result_s + mult_result_s(i);
 							end if;
                         end loop;
-						pipeline_stage_s <= 0;
+                        pipeline_stage_s <= 2;
+                        
+                    when 2 =>
+                        -- Act function
+						pipeline_stage_s <= 3;
+
+                    when 3 =>
+                        -- Ack act function
+                        pipeline_stage_s <= 0;
                         done_s <= '1';
 						
                 end case;
@@ -79,7 +87,7 @@ begin
     end process;
 
     --! Activation function input generation
-    act_func_input_s <= add_result_s when done_s = '1' else 0;
+    act_func_input_s <= add_result_s when pipeline_stage_s = 2 else 0;
 
     --! Activation function instantiation
 	act_func_inst: entity work.act_func()
