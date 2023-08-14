@@ -91,11 +91,14 @@ begin
 
     --! Activation function instantiation
 	act_func_inst: entity work.act_func()
-    port map(
-        clk    => clk,
-        input  => act_func_input_s,
-        output => output_s
-    );
+        generic map (
+            NEURON_INPUTS => INPUTS
+        )
+        port map(
+            clk    => clk,
+            input  => act_func_input_s,
+            output => output_s
+        );
 
     --! Other connections
     output <= output_s;

@@ -26,8 +26,8 @@ end entity neuron;
 
 architecture rtl of act_func is
 
-    signal result   : sfixed(NEURON_INPUTS-1 downto -frac);
-    signal output_s : 
+    signal result   : sfixed(NEURON_INPUTS-1 downto -frac)  := (others => (others => '0'));
+    signal output_s : sfixed(15 downto -frac)               := (others => '0');
     
 begin
     
