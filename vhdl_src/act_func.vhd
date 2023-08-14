@@ -31,7 +31,6 @@ architecture rtl of act_func is
     
 begin
     
-    -- Return activation >= 0.5
     calculate_activation:process(clk)
     begin
         if rising_edge(clk) then
