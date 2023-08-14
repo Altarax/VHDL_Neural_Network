@@ -182,6 +182,6 @@ if __name__ == '__main__':
     training_history, activations, parameters   = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
     converted_parameters, converted_activations = convert_to_fixed_point(parameters, activations)
 
-    print(parameters)
+    print(converted_activations)
 
 
