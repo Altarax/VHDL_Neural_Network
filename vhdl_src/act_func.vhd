@@ -5,7 +5,7 @@ use IEEE.numeric_std.all;
 use IEEE.fixed_float_types.all;
 use IEEE.fixed_pkg.all; 
 
---! Type library
+--! Import custom library
 library work;
 use work.types.all;
 
@@ -35,8 +35,9 @@ begin
     begin
         if rising_edge(clk) then
             if reset = '1' then
-
+                output_s
             else
+
             end if;
         end if;
     end process;
