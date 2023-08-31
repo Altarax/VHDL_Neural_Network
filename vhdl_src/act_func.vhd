@@ -13,33 +13,17 @@ use work.types.all;
 --! \details
 entity act_funct is
     generic (
-        NEURON_INPUTS : natural := 2
+
     );
     port (
-        clk 	: in std_logic;
-		reset	: in std_logic;
-		
-        input	: in sfixed_bus_array(NEURON_INPUTS-1 downto 0);
-        output	: out sfixed(15 downto -frac)
+
     );
 end entity neuron;
 
 architecture rtl of act_func is
 
-    signal result   : sfixed(NEURON_INPUTS-1 downto -frac)  := (others => (others => '0'));
-    signal output_s : sfixed(15 downto -frac)               := (others => '0');
     
 begin
     
-    calculate_activation:process(clk)
-    begin
-        if rising_edge(clk) then
-            if reset = '1' then
-                output_s
-            else
-
-            end if;
-        end if;
-    end process;
     
 end architecture rtl;

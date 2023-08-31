@@ -6,17 +6,8 @@ use IEEE.fixed_pkg.all;
 
 package types is
     
-    --! The frac value for everything
-	constant frac : integer := 4;
-
-    --! Sfixed array
-    subtype sfixed_type is sfixed(15 downto -frac);
-	type sfixed_bus_array is array (integer range <>) of sfixed_type;
-    
 end package types;
 
 package body types is
-    
-    
     
 end package body types;
