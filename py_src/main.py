@@ -144,7 +144,7 @@ def create_circle_dataset(n_samples=100, noise=0.1, factor=0.3, random_state=0):
     return X, y
 
 
-# Converti floating point to fixed point
+# Convertir floating point to fixed point
 def convert_to_fixed_point(parameters, activations, factor=5, upscale=8):
     converted_parameters = {}
     calculated_factor = (2 ** factor)
