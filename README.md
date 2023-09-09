@@ -2,8 +2,8 @@
 A complete neural network to learn two things : training a neural network in Python and creating it in VHDL.
 
 ## TODO :
-- [] Create a neural network in Python
-- [] Train the neural network in Python
+- [x] Create a neural network in Python
+- [x] Train the neural network in Python
 - [] Create a neural network in VHDL :
     - [] Create the neuron
     - [] Simulate neuron and validate
