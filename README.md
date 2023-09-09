@@ -6,11 +6,13 @@ A complete neural network to learn two things : training a neural network in Pyt
 - [] Train the neural network in Python
 - [] Create a neural network in VHDL :
     - [] Create the neuron
+    - [] Simulate neuron and validate
     - [] Create the activation function
+    - [] Simulate activation function and validate
     - [] Create the layer
+    - [] Simulate layer and validate
     - [] Create the neural network (TOP LEVEL)
-    - [] Simulate everything 
+    - [] Simulate TOP LEVEL 
 - [] Make everything automatised :
-    - [] Convert floating point to fixed point
-    - [] Generate bus_arrays with a and b parameters
-    - [] Generate the network according to the given parameters
+    - [x] Convert floating point to fixed point
+    - To write
