@@ -8,8 +8,11 @@ from sklearn.datasets import make_circles
 from sklearn.metrics import accuracy_score, log_loss
 from tqdm import tqdm
 from sklearn.preprocessing import MultiLabelBinarizer
+from tools import *
 
 DATASET_PATH = 'py_src\A_Z Handwritten Data.csv'
+Z_AND_ACT_VALUES = []
+
 
 # Initialisation
 def initialisation(dimensions):
@@ -182,6 +185,6 @@ if __name__ == '__main__':
     training_history, activations, parameters   = create_neural_network(X, y, HIDDEN_LAYERS, LEARNING_RATE, N_ITER)
     converted_parameters, converted_activations = convert_to_fixed_point(parameters, activations)
 
-    print(converted_activations)
-
-
+    act_min, act_max = find_max_min_list_of_arrays(converted_activations)
+    print("Minimum:", act_min)
+    print("Maximum:", act_max)
