@@ -2,8 +2,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-use IEEE.fixed_float_types.all;
-use IEEE.fixed_pkg.all; 
 
 --! Import custom library
 library work;
