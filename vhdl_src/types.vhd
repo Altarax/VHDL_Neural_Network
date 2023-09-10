@@ -2,9 +2,10 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
-use IEEE.fixed_pkg.all;
 
 package types is
+
+    type int_array is array (natural range <>) of integer;
     
 end package types;
 
