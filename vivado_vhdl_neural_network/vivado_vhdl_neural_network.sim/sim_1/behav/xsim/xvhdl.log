@@ -1,0 +1,5 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vhdl_src/types.vhd" into library xil_defaultlib
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vhdl_src/neuron.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuron'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vhdl_sim/neuron_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'neuron_tb'

@@ -1,0 +1,344 @@
+
+*** Running vivado
+    with args -log neuron.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron.tcl
+
+
+Commande ECHO d‚sactiv‚e.
+Commande ECHO d‚sactiv‚e.
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source neuron.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 429.133 ; gain = 163.508
+Command: synth_design -top neuron -part xc7a12ticsg325-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a12ti'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13096
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 866.820 ; gain = 412.812
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'neuron' [C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vhdl_src/neuron.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'neuron' (0#1) [C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vhdl_src/neuron.vhd:28]
+WARNING: [Synth 8-3330] design neuron has an empty top module
+WARNING: [Synth 8-3917] design neuron has port output[31] driven by constant 1
+WARNING: [Synth 8-3917] design neuron has port output[30] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[29] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[28] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[27] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[26] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[25] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[24] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[23] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[22] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[21] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[20] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[19] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[18] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[17] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[16] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[15] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[14] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[13] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[12] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[11] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[10] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[9] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[8] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[7] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[6] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[5] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[4] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[3] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[2] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[1] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[0] driven by constant 0
+WARNING: [Synth 8-7129] Port clk in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][31] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][30] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][29] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][28] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][27] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][26] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][25] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][24] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][23] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][22] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][21] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][20] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][19] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][18] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][17] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][16] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][15] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][14] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][13] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][12] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][11] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][10] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][9] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][8] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][7] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][6] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][5] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][4] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][3] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][2] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][1] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[0][0] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][31] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][30] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][29] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][28] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][27] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][26] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][25] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][24] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][23] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][22] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][21] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][20] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][19] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][18] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][17] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][16] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][15] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][14] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][13] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][12] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][11] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][10] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][9] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][8] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][7] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][6] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][5] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][4] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][3] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][2] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][1] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[1][0] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][31] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][30] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][29] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][28] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][27] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][26] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][25] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][24] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][23] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][22] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][21] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][20] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][19] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][18] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][17] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][16] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][15] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][14] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][13] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][12] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][11] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][10] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][9] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][8] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][7] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][6] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][5] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][4] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][3] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][2] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][1] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port inputs[2][0] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weigths[0][31] in module neuron is either unconnected or has no load
+WARNING: [Synth 8-7129] Port weigths[0][30] in module neuron is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 957.125 ; gain = 503.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 957.125 ; gain = 503.117
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 957.125 ; gain = 503.117
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a12ticsg325-1L
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 957.125 ; gain = 503.117
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 40 (col length:40)
+BRAMs: 40 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design neuron has an empty top module
+WARNING: [Synth 8-3917] design neuron has port output[31] driven by constant 1
+WARNING: [Synth 8-3917] design neuron has port output[30] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[29] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[28] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[27] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[26] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[25] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[24] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[23] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[22] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[21] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[20] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[19] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[18] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[17] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[16] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[15] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[14] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[13] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[12] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[11] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[10] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[9] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[8] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[7] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[6] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[5] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[4] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[3] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[2] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[1] driven by constant 0
+WARNING: [Synth 8-3917] design neuron has port output[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |    32|
++------+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    32|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 519 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+Synthesis Optimization Complete : Time (s): cpu = 00:00:13 ; elapsed = 00:00:21 . Memory (MB): peak = 1126.152 ; gain = 672.145
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1128.035 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1223.031 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 65c46a9f
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 167 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:24 . Memory (MB): peak = 1223.031 ; gain = 793.898
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vivado_vhdl_neural_network/vivado_vhdl_neural_network.runs/synth_1/neuron.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file neuron_utilization_synth.rpt -pb neuron_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 10 17:50:44 2023...

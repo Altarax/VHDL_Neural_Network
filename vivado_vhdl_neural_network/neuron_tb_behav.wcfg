@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="neuron_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="neuron_tb" />
+            <top_module name="types" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="73,964,779.166 ns"></ZoomStartTime>
+      <ZoomEndTime time="73,970,804.167 ns"></ZoomEndTime>
+      <Cursor1Time time="73,969,800.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wvobject fp_name="/neuron_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/inputs" type="array">
+      <obj_property name="ElementShortName">inputs[0:3]</obj_property>
+      <obj_property name="ObjectShortName">inputs[0:3]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/weigths" type="array">
+      <obj_property name="ElementShortName">weigths[0:3]</obj_property>
+      <obj_property name="ObjectShortName">weigths[0:3]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/biais" type="other">
+      <obj_property name="ElementShortName">biais</obj_property>
+      <obj_property name="ObjectShortName">biais</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/output" type="other">
+      <obj_property name="ElementShortName">output</obj_property>
+      <obj_property name="ObjectShortName">output</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/TOTAL" type="other">
+      <obj_property name="ElementShortName">TOTAL</obj_property>
+      <obj_property name="ObjectShortName">TOTAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/neuron_tb/UUT/sum" type="other">
+      <obj_property name="ElementShortName">sum</obj_property>
+      <obj_property name="ObjectShortName">sum</obj_property>
+   </wvobject>
+</wave_config>

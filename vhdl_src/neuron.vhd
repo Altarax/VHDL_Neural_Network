@@ -17,10 +17,12 @@ entity neuron is
         clk     : in std_logic;
         reset   : in std_logic;
 
+        start   : in std_logic;
         inputs  : in int_array(0 to TOTAL);
         weigths : in int_array(0 to TOTAL);
         biais   : in integer;
 
+        done    : out std_logic;
         output  : out integer
     );
 end entity neuron;
@@ -37,16 +39,21 @@ begin
         if reset = '1' then
             sum <= 0;
         elsif rising_edge(clk) then
-            for i in 0 to TOTAL loop
-                sum <= sum + inputs(i)*weigths(i);
-            end loop;
-            sum <= sum + biais;
+            if start = '1' then
+                for i in 0 to TOTAL loop
+                    sum <= sum + inputs(i)*weigths(i);
+                end loop;
+                sum <= sum + biais;
+            else
+                sum <= sum; 
+            end if;
         end if;
     end process;
 
 --    act_function: entity work.sigmoid 
 --    port map (clock   => clk,
 --              address => sum,
---              q       => sigmoid_output);
+--              q       => sigmoid_output
+--              done    => done);
     
 end architecture rtl;

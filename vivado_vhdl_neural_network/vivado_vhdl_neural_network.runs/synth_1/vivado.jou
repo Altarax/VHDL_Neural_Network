@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Sun Sep 10 17:50:11 2023
+# Process ID: 4580
+# Current directory: C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vivado_vhdl_neural_network/vivado_vhdl_neural_network.runs/synth_1
+# Command line: vivado.exe -log neuron.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source neuron.tcl
+# Log file: C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vivado_vhdl_neural_network/vivado_vhdl_neural_network.runs/synth_1/neuron.vds
+# Journal file: C:/Users/jaysb/OneDrive/Bureau/Projets/Projets_FPGA/Nouveau dossier/VHDL_Neural_Network/vivado_vhdl_neural_network/vivado_vhdl_neural_network.runs/synth_1\vivado.jou
+# Running On: Jayson, OS: Windows, CPU Frequency: 2592 MHz, CPU Physical cores: 6, Host memory: 8424 MB
+#-----------------------------------------------------------
+source neuron.tcl -notrace
